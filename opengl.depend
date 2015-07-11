@@ -1,0 +1,100 @@
+# depslib dependency file v1.0
+1436528286 source:z:\projects\opengl\les1.cpp
+	<windows.h>
+	<gl\gl.h>
+	<gl\glu.h>
+
+1436529121 source:z:\projects\opengl\les2.cpp
+	<windows.h>
+	<gl\gl.h>
+	<gl\glu.h>
+
+1436542835 source:z:\projects\opengl\engine.cpp
+	"ogl.h"
+	"cface/file.h"
+	"formats/png.h"
+	"formats/utils.h"
+	<windows.h>
+	<gl\gl.h>
+	<gl\glu.h>
+
+1436529661 source:z:\projects\opengl\les3.cpp
+	<windows.h>
+	<gl\gl.h>
+	<gl\glu.h>
+
+1436529929 source:z:\projects\opengl\les4.cpp
+	<windows.h>
+	<gl\gl.h>
+	<gl\glu.h>
+
+1436530537 source:z:\projects\opengl\les5.cpp
+	<gl\gl.h>
+	<gl\glu.h>
+
+1436538970 source:z:\projects\opengl\les6.cpp
+	"ogl.h"
+	<gl\gl.h>
+	<gl\glu.h>
+
+1436530530 z:\projects\opengl\glaux.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1436540358 z:\projects\opengl\ogl.h
+
+1436539229 source:z:\projects\formats\png.cpp
+	"png.h"
+	"zip.h"
+	"utils.h"
+
+1436539211 z:\projects\formats\png.h
+
+1434956984 z:\projects\formats\zip.h
+
+1434956984 z:\projects\formats\utils.h
+
+1434956984 source:z:\projects\formats\zip.cpp
+	"cface/bstream.h"
+	"zip.h"
+
+1434956984 source:z:\projects\formats\utils.cpp
+	"formats/utils.h"
+
+1434956786 source:z:\projects\cface\bstream.cpp
+	"bstream.h"
+
+1434956786 z:\projects\cface\bstream.h
+
+1436521338 source:z:\projects\platform\winsys.cpp
+	<windows.h>
+	"cface\crt.h"
+	"cface\stream.h"
+	"cface\file.h"
+	"cface\date.h"
+
+1433746476 source:z:\projects\cface\date.cpp
+	"crt.h"
+	"date.h"
+
+1436521344 z:\projects\cface\crt.h
+
+1433746476 z:\projects\cface\date.h
+
+1436521802 source:z:\projects\cface\crt.cpp
+	"crt.h"
+
+1433746483 source:z:\projects\cface\xsort.cpp
+
+1433746480 source:z:\projects\cface\stream.cpp
+	"crt.h"
+	"stream.h"
+
+1433746480 z:\projects\cface\stream.h
+
+1436542562 source:z:\projects\opengl\les7.cpp
+	"ogl.h"
+	<gl\gl.h>
+	<gl\glu.h>
+

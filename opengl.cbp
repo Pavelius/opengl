@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="opengl" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../applications/debug/opengl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../objects/debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="glaux" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="../../applications/release/opengl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../objects/release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../cface/bstream.cpp" />
+		<Unit filename="../cface/bstream.h" />
+		<Unit filename="../cface/crt.cpp" />
+		<Unit filename="../cface/crt.h" />
+		<Unit filename="../cface/date.cpp" />
+		<Unit filename="../cface/date.h" />
+		<Unit filename="../cface/stream.cpp" />
+		<Unit filename="../cface/stream.h" />
+		<Unit filename="../cface/xsort.cpp" />
+		<Unit filename="../formats/png.cpp" />
+		<Unit filename="../formats/png.h" />
+		<Unit filename="../formats/utils.cpp" />
+		<Unit filename="../formats/utils.h" />
+		<Unit filename="../formats/zip.cpp" />
+		<Unit filename="../formats/zip.h" />
+		<Unit filename="../platform/winsys.cpp" />
+		<Unit filename="engine.cpp" />
+		<Unit filename="les2.cpp">
+			<Option link="0" />
+		</Unit>
+		<Unit filename="les3.cpp">
+			<Option link="0" />
+		</Unit>
+		<Unit filename="les4.cpp">
+			<Option link="0" />
+		</Unit>
+		<Unit filename="les5.cpp">
+			<Option link="0" />
+		</Unit>
+		<Unit filename="les6.cpp">
+			<Option link="0" />
+		</Unit>
+		<Unit filename="les7.cpp" />
+		<Unit filename="ogl.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
