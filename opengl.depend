@@ -93,7 +93,12 @@
 
 1433746480 z:\projects\cface\stream.h
 
-1436542562 source:z:\projects\opengl\les7.cpp
+1436772031 source:z:\projects\opengl\les7.cpp
+	"ogl.h"
+	<gl\gl.h>
+	<gl\glu.h>
+
+1436802837 source:z:\projects\opengl\les8.cpp
 	"ogl.h"
 	<gl\gl.h>
 	<gl\glu.h>

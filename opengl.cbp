@@ -68,7 +68,10 @@
 		<Unit filename="les6.cpp">
 			<Option link="0" />
 		</Unit>
-		<Unit filename="les7.cpp" />
+		<Unit filename="les7.cpp">
+			<Option link="0" />
+		</Unit>
+		<Unit filename="les8.cpp" />
 		<Unit filename="ogl.h" />
 		<Extensions>
 			<code_completion />

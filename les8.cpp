@@ -10,9 +10,11 @@
 #include <gl\gl.h>			// Header File For The OpenGL32 Library
 #include <gl\glu.h>			// Header File For The GLu32 Library
 
-bool	light;				// Lighting ON/OFF ( NEW )
-bool	lp;					// L Pressed? ( NEW )
-bool	fp;					// F Pressed? ( NEW )
+bool	light;				// Lighting ON/OFF
+bool    blend;				// Blending OFF/ON? ( NEW )
+bool	lp;					// L Pressed?
+bool	fp;					// F Pressed?
+bool	bp;					// B Pressed? ( NEW )
 
 GLfloat	xrot;				// X Rotation
 GLfloat	yrot;				// Y Rotation
@@ -45,7 +47,7 @@ void ogl_resize(int width, int height)					// Resize And Initialize The GL Windo
 
 int ogl_init()											// All Setup For OpenGL Goes Here
 {
-	if(!ogl::load("data/crate.png", texture))					// Jump To Texture Loading Routine
+	if(!ogl::load("data/glass.png", texture, 3))		// Jump To Texture Loading Routine
 		return 0;										// If Texture Didn't Load Return FALSE
 	glEnable(GL_TEXTURE_2D);							// Enable Texture Mapping
 	glShadeModel(GL_SMOOTH);							// Enable Smooth Shading
@@ -59,6 +61,9 @@ int ogl_init()											// All Setup For OpenGL Goes Here
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);		// Setup The Diffuse Light
 	glLightfv(GL_LIGHT1, GL_POSITION,LightPosition);	// Position The Light
 	glEnable(GL_LIGHT1);								// Enable Light One
+
+	glColor4f(1.0f, 1.0f, 1.0f, 0.5);					// Full Brightness.  50% Alpha
+	glBlendFunc(GL_SRC_ALPHA,GL_ONE);					// Set The Blending Function For Translucency
 	return 1;											// Initialization Went OK
 }
 
@@ -80,6 +85,7 @@ int ogl_draw_scene()									// Here's Where We Do All The Drawing
 	}
 	if(!ogl::keys['L'])
 		lp=0;
+
 	if(ogl::keys['F'] && !fp)
 	{
 		fp=1;
@@ -89,6 +95,26 @@ int ogl_draw_scene()									// Here's Where We Do All The Drawing
 	}
 	if(!ogl::keys['F'])
 		fp=0;
+
+	// Blending Code Starts Here
+	if(ogl::keys['B'] && !bp)
+	{
+		bp = true;
+		blend = !blend;
+		if(blend)
+		{
+			glEnable(GL_BLEND);			// Turn Blending On
+			glDisable(GL_DEPTH_TEST);	// Turn Depth Testing Off
+		}
+		else
+		{
+			glDisable(GL_BLEND);		// Turn Blending Off
+			glEnable(GL_DEPTH_TEST);	// Turn Depth Testing On
+		}
+	}
+	if(!ogl::keys['B'])
+		bp = false;
+
 	if(ogl::keys[33])
 		z-=0.02f;
 	if(ogl::keys[34])
@@ -151,5 +177,6 @@ int ogl_draw_scene()									// Here's Where We Do All The Drawing
 	glEnd();
 
 	xrot+=xspeed;
-	yrot+=yspeed;											// Keep Going
+	yrot+=yspeed;
+											// Keep Going
 }
