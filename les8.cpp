@@ -16,18 +16,18 @@ bool	lp;					// L Pressed?
 bool	fp;					// F Pressed?
 bool	bp;					// B Pressed? ( NEW )
 
-GLfloat	xrot;				// X Rotation
-GLfloat	yrot;				// Y Rotation
-GLfloat xspeed;				// X Rotation Speed
-GLfloat yspeed;				// Y Rotation Speed
-GLfloat	z=-5.0f;			// Depth Into The Screen
+float	xrot;				// X Rotation
+float	yrot;				// Y Rotation
+float 	xspeed;				// X Rotation Speed
+float	yspeed;				// Y Rotation Speed
+float	z=-5.0f;			// Depth Into The Screen
 
-GLfloat LightAmbient[]=		{ 0.5f, 0.5f, 0.5f, 1.0f };
-GLfloat LightDiffuse[]=		{ 1.0f, 1.0f, 1.0f, 1.0f };
-GLfloat LightPosition[]=	{ 0.0f, 0.0f, 2.0f, 1.0f };
+float	LightAmbient[] =	{ 0.5f, 0.5f, 0.5f, 1.0f };
+float	LightDiffuse[] =	{ 1.0f, 1.0f, 1.0f, 1.0f };
+float	LightPosition[] =	{ 0.0f, 0.0f, 2.0f, 1.0f };
 
-GLuint	filter;				// Which Filter To Use
-GLuint	texture[3];			// Storage For 3 Textures
+unsigned filter;				// Which Filter To Use
+unsigned texture[3];			// Storage For 3 Textures
 
 void ogl_resize(int width, int height)					// Resize And Initialize The GL Window
 {
@@ -130,10 +130,10 @@ int ogl_draw_scene()									// Here's Where We Do All The Drawing
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	// Clear The Screen And The Depth Buffer
 	glLoadIdentity();									// Reset The View
-	glTranslatef(0.0f,0.0f,z);
+	glTranslatef(0.0f,0.0f, z);
 
-	glRotatef(xrot,1.0f,0.0f,0.0f);
-	glRotatef(yrot,0.0f,1.0f,0.0f);
+	glRotatef(xrot, 1.0f, 0.0f, 0.0f);
+	glRotatef(yrot, 0.0f, 1.0f, 0.0f);
 
 	glBindTexture(GL_TEXTURE_2D, texture[filter]);
 
@@ -178,5 +178,7 @@ int ogl_draw_scene()									// Here's Where We Do All The Drawing
 
 	xrot+=xspeed;
 	yrot+=yspeed;
+
+	return 1;
 											// Keep Going
 }
